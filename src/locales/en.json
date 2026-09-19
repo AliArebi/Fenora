@@ -1,0 +1,25 @@
+{
+  "brandTagline": "See where your money goes.",
+  "nav": { "dashboard": "Dashboard", "transactions": "Transactions", "analytics": "Analytics", "settings": "Settings" },
+  "actions": { "addTransaction": "Add transaction", "edit": "Edit", "delete": "Delete", "cancel": "Cancel", "save": "Save transaction", "update": "Update transaction", "clear": "Clear filters", "confirm": "Confirm", "close": "Close", "dismiss": "Dismiss" },
+  "navigation": { "primary": "Primary navigation" },
+  "header": { "dashboard": "Financial overview", "transactions": "Transaction history", "analytics": "Analytics", "settings": "Settings", "privacy": "Your data stays on this device" },
+  "summary": { "income": "Total income", "expense": "Total expenses", "bill": "Total bills", "investment": "Investments", "balance": "Current balance", "balanceHint": "Income minus all outflows" },
+  "type": { "income": "Income", "expense": "Expense", "bill": "Bill", "investment": "Investment", "all": "All types" },
+  "categories": {
+    "salary": "Salary", "freelance": "Freelance", "business": "Business", "bonus": "Bonus", "interest": "Interest", "rental": "Rental", "other": "Other",
+    "food": "Food", "transportation": "Transportation", "housing": "Housing", "shopping": "Shopping", "entertainment": "Entertainment", "healthcare": "Healthcare", "education": "Education", "travel": "Travel",
+    "rent": "Rent", "electricity": "Electricity", "water": "Water", "internet": "Internet", "phone": "Phone", "insurance": "Insurance", "subscriptions": "Subscriptions",
+    "stocks": "Stocks", "etfs": "ETFs", "crypto": "Crypto", "bonds": "Bonds", "realEstate": "Real estate", "savings": "Savings"
+  },
+  "charts": { "expenseBreakdown": "Expense breakdown", "expenseSubtitle": "Spending by category", "sixMonthTrend": "Six-month trend", "trendSubtitle": "A rolling view of income and outflows", "noExpenseData": "Add an expense to see its category breakdown.", "noTrendData": "Add transactions to reveal your financial trend." },
+  "recent": { "title": "Recent activity", "subtitle": "Your latest transactions", "viewAll": "View all", "empty": "No transactions yet", "emptyHint": "Add your first transaction to begin tracking." },
+  "transaction": { "transaction": "Transaction", "category": "Category", "type": "Type", "date": "Date", "amount": "Amount", "actions": "Actions", "count": "{{count}} transactions", "descriptionFallback": "No description" },
+  "filters": { "search": "Search transactions", "searchPlaceholder": "Search title or description…", "type": "Type", "category": "Category", "allCategories": "All categories", "startDate": "From", "endDate": "To", "active": "Active filters", "empty": "No matching transactions", "emptyHint": "Try adjusting or clearing your filters." },
+  "form": { "addTitle": "Add transaction", "editTitle": "Edit transaction", "subtitle": "Record income, spending, bills, or investments.", "title": "Title", "titlePlaceholder": "e.g. Monthly salary", "description": "Description", "descriptionPlaceholder": "Optional note", "amount": "Amount", "date": "Date", "type": "Transaction type", "category": "Category", "selectCategory": "Select a category" },
+  "validation": { "titleRequired": "Enter a title.", "titleLong": "Keep the title under 80 characters.", "amountPositive": "Enter an amount greater than zero.", "dateRequired": "Choose a date.", "categoryRequired": "Choose a category." },
+  "dialogs": { "deleteTitle": "Delete transaction?", "deleteBody": "This permanently removes “{{title}}”. This action cannot be undone.", "clearTitle": "Clear all financial data?", "clearBody": "Every transaction stored in this browser will be permanently deleted.", "resetTitle": "Reset demo data?", "resetBody": "Current transactions will be replaced with the original FINORA demo set." },
+  "settings": { "preferences": "Preferences", "preferencesHint": "Personalize how FINORA looks and formats values.", "language": "Language", "currency": "Display currency", "currencyHint": "Display preference only — values are not converted.", "data": "Local data", "dataHint": "Transactions are stored privately in this browser with IndexedDB.", "resetDemo": "Reset demo data", "resetDemoHint": "Restore the initial portfolio-ready sample dataset.", "clearData": "Clear all financial data", "clearDataHint": "Permanently remove every transaction from this browser." },
+  "toast": { "created": "Transaction added", "updated": "Transaction updated", "deleted": "Transaction deleted", "reset": "Demo data restored", "cleared": "Financial data cleared", "error": "Something went wrong. Please try again." },
+  "common": { "loading": "Loading your finances…", "notAvailable": "Not available", "localFirst": "Local-first", "plus": "Plus", "minus": "Minus" }
+}

@@ -1,0 +1,25 @@
+{
+  "brandTagline": "Verstehe, wohin dein Geld fließt.",
+  "nav": { "dashboard": "Übersicht", "transactions": "Transaktionen", "analytics": "Analysen", "settings": "Einstellungen" },
+  "actions": { "addTransaction": "Transaktion hinzufügen", "edit": "Bearbeiten", "delete": "Löschen", "cancel": "Abbrechen", "save": "Transaktion speichern", "update": "Transaktion aktualisieren", "clear": "Filter löschen", "confirm": "Bestätigen", "close": "Schließen", "dismiss": "Ausblenden" },
+  "navigation": { "primary": "Hauptnavigation" },
+  "header": { "dashboard": "Finanzübersicht", "transactions": "Transaktionsverlauf", "analytics": "Analysen", "settings": "Einstellungen", "privacy": "Deine Daten bleiben auf diesem Gerät" },
+  "summary": { "income": "Einnahmen", "expense": "Ausgaben", "bill": "Rechnungen", "investment": "Investitionen", "balance": "Aktueller Saldo", "balanceHint": "Einnahmen abzüglich aller Abflüsse" },
+  "type": { "income": "Einnahme", "expense": "Ausgabe", "bill": "Rechnung", "investment": "Investition", "all": "Alle Typen" },
+  "categories": {
+    "salary": "Gehalt", "freelance": "Freiberuflich", "business": "Geschäft", "bonus": "Bonus", "interest": "Zinsen", "rental": "Vermietung", "other": "Sonstiges",
+    "food": "Lebensmittel", "transportation": "Transport", "housing": "Wohnen", "shopping": "Einkäufe", "entertainment": "Unterhaltung", "healthcare": "Gesundheit", "education": "Bildung", "travel": "Reisen",
+    "rent": "Miete", "electricity": "Strom", "water": "Wasser", "internet": "Internet", "phone": "Telefon", "insurance": "Versicherung", "subscriptions": "Abos",
+    "stocks": "Aktien", "etfs": "ETFs", "crypto": "Krypto", "bonds": "Anleihen", "realEstate": "Immobilien", "savings": "Sparen"
+  },
+  "charts": { "expenseBreakdown": "Ausgabenverteilung", "expenseSubtitle": "Ausgaben nach Kategorie", "sixMonthTrend": "Sechs-Monats-Trend", "trendSubtitle": "Entwicklung von Einnahmen und Abflüssen", "noExpenseData": "Füge eine Ausgabe hinzu, um die Verteilung zu sehen.", "noTrendData": "Füge Transaktionen hinzu, um den Trend zu sehen." },
+  "recent": { "title": "Letzte Aktivitäten", "subtitle": "Deine neuesten Transaktionen", "viewAll": "Alle anzeigen", "empty": "Noch keine Transaktionen", "emptyHint": "Füge deine erste Transaktion hinzu." },
+  "transaction": { "transaction": "Transaktion", "category": "Kategorie", "type": "Typ", "date": "Datum", "amount": "Betrag", "actions": "Aktionen", "count": "{{count}} Transaktionen", "descriptionFallback": "Keine Beschreibung" },
+  "filters": { "search": "Transaktionen suchen", "searchPlaceholder": "Titel oder Beschreibung suchen…", "type": "Typ", "category": "Kategorie", "allCategories": "Alle Kategorien", "startDate": "Von", "endDate": "Bis", "active": "Aktive Filter", "empty": "Keine passenden Transaktionen", "emptyHint": "Passe die Filter an oder lösche sie." },
+  "form": { "addTitle": "Transaktion hinzufügen", "editTitle": "Transaktion bearbeiten", "subtitle": "Erfasse Einnahmen, Ausgaben, Rechnungen oder Investitionen.", "title": "Titel", "titlePlaceholder": "z. B. Monatsgehalt", "description": "Beschreibung", "descriptionPlaceholder": "Optionale Notiz", "amount": "Betrag", "date": "Datum", "type": "Transaktionstyp", "category": "Kategorie", "selectCategory": "Kategorie wählen" },
+  "validation": { "titleRequired": "Gib einen Titel ein.", "titleLong": "Der Titel darf höchstens 80 Zeichen lang sein.", "amountPositive": "Gib einen Betrag größer als null ein.", "dateRequired": "Wähle ein Datum.", "categoryRequired": "Wähle eine Kategorie." },
+  "dialogs": { "deleteTitle": "Transaktion löschen?", "deleteBody": "„{{title}}“ wird dauerhaft entfernt. Dies kann nicht rückgängig gemacht werden.", "clearTitle": "Alle Finanzdaten löschen?", "clearBody": "Alle in diesem Browser gespeicherten Transaktionen werden dauerhaft gelöscht.", "resetTitle": "Demo-Daten zurücksetzen?", "resetBody": "Aktuelle Transaktionen werden durch die ursprünglichen FINORA-Demo-Daten ersetzt." },
+  "settings": { "preferences": "Präferenzen", "preferencesHint": "Passe Darstellung und Werteformatierung an.", "language": "Sprache", "currency": "Anzeigewährung", "currencyHint": "Nur Anzeige — Werte werden nicht umgerechnet.", "data": "Lokale Daten", "dataHint": "Transaktionen werden privat mit IndexedDB in diesem Browser gespeichert.", "resetDemo": "Demo-Daten zurücksetzen", "resetDemoHint": "Stelle den ursprünglichen Beispieldatensatz wieder her.", "clearData": "Alle Finanzdaten löschen", "clearDataHint": "Entfernt alle Transaktionen dauerhaft aus diesem Browser." },
+  "toast": { "created": "Transaktion hinzugefügt", "updated": "Transaktion aktualisiert", "deleted": "Transaktion gelöscht", "reset": "Demo-Daten wiederhergestellt", "cleared": "Finanzdaten gelöscht", "error": "Etwas ist schiefgegangen. Bitte versuche es erneut." },
+  "common": { "loading": "Finanzen werden geladen…", "notAvailable": "Nicht verfügbar", "localFirst": "Lokal gespeichert", "plus": "Plus", "minus": "Minus" }
+}

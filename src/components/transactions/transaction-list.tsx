@@ -1,0 +1,25 @@
+import { Edit3, MoreHorizontal, Trash2 } from 'lucide-react'
+import * as DropdownMenu from '@radix-ui/react-dropdown-menu'
+import { useTranslation } from 'react-i18next'
+import { Button } from '@/components/ui/button'
+import { TypeBadge } from '@/components/transactions/type-badge'
+import { formatCurrency } from '@/lib/utils'
+import type { Currency, Transaction } from '@/types/finance'
+
+interface TransactionListProps { transactions: Transaction[]; currency: Currency; locale: string; onEdit: (transaction: Transaction) => void; onDelete: (transaction: Transaction) => void; emptyFiltered?: boolean }
+
+export function TransactionList({ transactions, currency, locale, onEdit, onDelete, emptyFiltered }: TransactionListProps) {
+  const { t } = useTranslation()
+  if (!transactions.length) return <div className="panel grid min-h-72 place-items-center p-8 text-center"><div><span className="mx-auto mb-4 grid size-12 place-items-center rounded-xl border border-dashed border-muted-foreground/40 text-muted-foreground"><span className="text-xl">—</span></span><h3 className="font-medium">{t(emptyFiltered ? 'filters.empty' : 'recent.empty')}</h3><p className="mt-1 text-sm text-muted-foreground">{t(emptyFiltered ? 'filters.emptyHint' : 'recent.emptyHint')}</p></div></div>
+  return <div className="panel overflow-hidden">
+    <div className="hidden overflow-x-auto md:block"><table className="w-full border-collapse text-start text-sm"><thead><tr className="border-b border-border bg-white/[.018] text-xs uppercase tracking-wider text-muted-foreground"><Th>{t('transaction.transaction')}</Th><Th>{t('transaction.category')}</Th><Th>{t('transaction.type')}</Th><Th>{t('transaction.date')}</Th><Th className="text-end">{t('transaction.amount')}</Th><Th className="w-16"><span className="sr-only">{t('transaction.actions')}</span></Th></tr></thead><tbody>{transactions.map((item) => <tr key={item.id} className="border-b border-border/70 transition last:border-0 hover:bg-white/[.02]"><Td><p className="font-medium text-foreground">{item.title}</p><p className="mt-0.5 max-w-[280px] truncate text-xs text-muted-foreground">{item.description || t('transaction.descriptionFallback')}</p></Td><Td>{t(`categories.${item.category}`)}</Td><Td><TypeBadge type={item.type} /></Td><Td>{new Intl.DateTimeFormat(locale, { dateStyle: 'medium' }).format(new Date(`${item.date}T12:00:00`))}</Td><Td className={`text-end font-semibold ${item.type === 'income' ? 'text-emerald-300' : 'text-foreground'}`}><span className="sr-only">{t(item.type === 'income' ? 'common.plus' : 'common.minus')}</span><span dir="ltr">{item.type === 'income' ? '+' : '−'} {formatCurrency(item.amount, currency, locale)}</span></Td><Td><ActionMenu item={item} onEdit={onEdit} onDelete={onDelete} /></Td></tr>)}</tbody></table></div>
+    <div className="divide-y divide-border md:hidden">{transactions.map((item) => <article key={item.id} className="p-4"><div className="flex items-start gap-3"><TypeBadge type={item.type} compact /><div className="min-w-0 flex-1"><h3 className="truncate font-medium">{item.title}</h3><p className="mt-1 text-xs text-muted-foreground">{t(`categories.${item.category}`)} · {new Intl.DateTimeFormat(locale, { dateStyle: 'medium' }).format(new Date(`${item.date}T12:00:00`))}</p></div><ActionMenu item={item} onEdit={onEdit} onDelete={onDelete} /></div><p className={`mt-3 text-end font-semibold ${item.type === 'income' ? 'text-emerald-300' : ''}`} dir="ltr">{item.type === 'income' ? '+' : '−'} {formatCurrency(item.amount, currency, locale)}</p></article>)}</div>
+  </div>
+}
+
+function Th({ children, className = '' }: { children: React.ReactNode; className?: string }) { return <th scope="col" className={`px-5 py-3.5 text-start font-medium ${className}`}>{children}</th> }
+function Td({ children, className = '' }: { children: React.ReactNode; className?: string }) { return <td className={`px-5 py-4 text-muted-foreground ${className}`}>{children}</td> }
+function ActionMenu({ item, onEdit, onDelete }: { item: Transaction; onEdit: (item: Transaction) => void; onDelete: (item: Transaction) => void }) {
+  const { t } = useTranslation()
+  return <DropdownMenu.Root><DropdownMenu.Trigger asChild><Button variant="ghost" size="icon" aria-label={t('transaction.actions')}><MoreHorizontal className="size-4" /></Button></DropdownMenu.Trigger><DropdownMenu.Portal><DropdownMenu.Content sideOffset={5} align="end" className="z-50 w-36 rounded-lg border border-border bg-[#15171d] p-1 shadow-2xl"><DropdownMenu.Item onSelect={() => onEdit(item)} className="flex cursor-default items-center gap-2 rounded-md px-3 py-2 text-sm outline-none data-[highlighted]:bg-white/[.06]"><Edit3 className="size-4" />{t('actions.edit')}</DropdownMenu.Item><DropdownMenu.Item onSelect={() => onDelete(item)} className="flex cursor-default items-center gap-2 rounded-md px-3 py-2 text-sm text-rose-300 outline-none data-[highlighted]:bg-rose-400/10"><Trash2 className="size-4" />{t('actions.delete')}</DropdownMenu.Item></DropdownMenu.Content></DropdownMenu.Portal></DropdownMenu.Root>
+}
