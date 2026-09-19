@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next'
 import { formatCurrency } from '@/lib/utils'
 import type { Currency } from '@/types/finance'
 
-const colors = ['#7cf4c8', '#8aa9ff', '#f2bd6e', '#ec7e8d', '#b89cff', '#64c8e8', '#b8d76a', '#e59d6c']
+const colors = ['#10b981', '#3b82f6', '#f59e0b', '#f43f5e', '#8b5cf6', '#06b6d4', '#84cc16', '#f97316']
 export function ExpenseDonut({ data, currency, locale }: { data: { category: string; value: number }[]; currency: Currency; locale: string }) {
   const { t } = useTranslation()
   const localized = data.map((item) => ({ ...item, name: t(`categories.${item.category}`) }))
@@ -12,8 +12,8 @@ export function ExpenseDonut({ data, currency, locale }: { data: { category: str
     {!localized.length ? <ChartEmpty text={t('charts.noExpenseData')} /> : <div className="mt-4 min-h-0 flex-1" aria-label={t('charts.expenseBreakdown')}>
       <ResponsiveContainer width="100%" height={280}>
         <PieChart><Pie data={localized} dataKey="value" nameKey="name" innerRadius={64} outerRadius={92} paddingAngle={3} stroke="none">{localized.map((item, i) => <Cell key={item.category} fill={colors[i % colors.length]} />)}</Pie>
-          <Tooltip formatter={(value) => formatCurrency(Number(value), currency, locale)} contentStyle={{ background: '#17191f', border: '1px solid #2a2d35', borderRadius: 10, fontSize: 13 }} />
-          <Legend iconType="circle" iconSize={7} wrapperStyle={{ fontSize: 12, color: '#9b9fa9' }} /></PieChart>
+          <Tooltip formatter={(value) => formatCurrency(Number(value), currency, locale)} contentStyle={{ background: '#ffffff', color: '#1d2939', border: '1px solid #d9e8e2', borderRadius: 10, fontSize: 13, boxShadow: '0 10px 30px rgba(24,86,67,.12)' }} />
+          <Legend iconType="circle" iconSize={7} wrapperStyle={{ fontSize: 12, color: '#667085' }} /></PieChart>
       </ResponsiveContainer>
     </div>}
   </section>

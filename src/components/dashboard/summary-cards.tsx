@@ -4,10 +4,10 @@ import { formatCurrency } from '@/lib/utils'
 import type { Currency, FinanceTotals } from '@/types/finance'
 
 const cards = [
-  { key: 'income' as const, Icon: ArrowUpRight, tone: 'text-emerald-300 bg-emerald-400/10' },
-  { key: 'expense' as const, Icon: ArrowDownRight, tone: 'text-rose-300 bg-rose-400/10' },
-  { key: 'bill' as const, Icon: Receipt, tone: 'text-amber-300 bg-amber-400/10' },
-  { key: 'investment' as const, Icon: TrendingUp, tone: 'text-blue-300 bg-blue-400/10' },
+  { key: 'income' as const, Icon: ArrowUpRight, tone: 'text-emerald-700 bg-emerald-100' },
+  { key: 'expense' as const, Icon: ArrowDownRight, tone: 'text-rose-700 bg-rose-100' },
+  { key: 'bill' as const, Icon: Receipt, tone: 'text-amber-700 bg-amber-100' },
+  { key: 'investment' as const, Icon: TrendingUp, tone: 'text-blue-700 bg-blue-100' },
   { key: 'balance' as const, Icon: Landmark, tone: 'text-accent bg-accent/10' },
 ]
 

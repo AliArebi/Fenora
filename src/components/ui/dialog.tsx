@@ -11,10 +11,10 @@ export const DialogClose = DialogPrimitive.Close
 export function DialogContent({ className, children, ...props }: ComponentProps<typeof DialogPrimitive.Content>) {
   const { t } = useTranslation()
   return <DialogPrimitive.Portal>
-    <DialogPrimitive.Overlay className="fixed inset-0 z-50 bg-black/70 backdrop-blur-[2px] data-[state=open]:animate-fade-in" />
-    <DialogPrimitive.Content className={cn('fixed start-1/2 top-1/2 z-50 w-[calc(100%-2rem)] max-w-xl -translate-x-1/2 -translate-y-1/2 rounded-xl border border-border bg-[#111319] p-6 shadow-2xl outline-none data-[state=open]:animate-dialog-in rtl:translate-x-1/2', className)} {...props}>
+    <DialogPrimitive.Overlay className="fixed inset-0 z-50 bg-slate-900/30 backdrop-blur-[2px] data-[state=open]:animate-fade-in" />
+    <DialogPrimitive.Content className={cn('fixed start-1/2 top-1/2 z-50 w-[calc(100%-2rem)] max-w-xl -translate-x-1/2 -translate-y-1/2 rounded-xl border border-border bg-card p-6 shadow-2xl outline-none data-[state=open]:animate-dialog-in rtl:translate-x-1/2', className)} {...props}>
       {children}
-      <DialogPrimitive.Close className="absolute end-4 top-4 rounded-md p-1.5 text-muted-foreground transition hover:bg-white/5 hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent" aria-label={t('actions.close')}><X className="size-4" /></DialogPrimitive.Close>
+      <DialogPrimitive.Close className="absolute end-4 top-4 rounded-md p-1.5 text-muted-foreground transition hover:bg-muted hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent" aria-label={t('actions.close')}><X className="size-4" /></DialogPrimitive.Close>
     </DialogPrimitive.Content>
   </DialogPrimitive.Portal>
 }

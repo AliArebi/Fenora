@@ -7,8 +7,8 @@ const buttonVariants = cva('inline-flex items-center justify-center gap-2 whites
   variants: {
     variant: {
       primary: 'bg-accent text-accent-foreground hover:bg-accent/90',
-      secondary: 'border border-border bg-white/[.035] text-foreground hover:bg-white/[.07]',
-      ghost: 'text-muted-foreground hover:bg-white/[.06] hover:text-foreground',
+      secondary: 'border border-border bg-white text-foreground hover:bg-muted',
+      ghost: 'text-muted-foreground hover:bg-muted hover:text-foreground',
       destructive: 'bg-destructive text-white hover:bg-destructive/90',
     },
     size: { default: 'h-10 px-4', sm: 'h-9 px-3', icon: 'size-9 p-0' },

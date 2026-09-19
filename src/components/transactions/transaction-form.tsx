@@ -29,4 +29,4 @@ export function TransactionForm() {
   </form></DialogContent></Dialog>
 }
 
-function Field({ label, error, children }: { label: string; error?: string; children: React.ReactNode }) { return <label className="block"><span className="label">{label}</span>{children}{error && <span className="mt-1 block text-xs text-rose-300">{error}</span>}</label> }
+function Field({ label, error, children }: { label: string; error?: string; children: React.ReactNode }) { return <label className="block"><span className="label">{label}</span>{children}{error && <span className="mt-1 block text-xs text-rose-600">{error}</span>}</label> }
