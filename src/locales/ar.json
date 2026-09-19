@@ -1,0 +1,25 @@
+{
+  "brandTagline": "اعرف أين تذهب أموالك.",
+  "nav": { "dashboard": "لوحة التحكم", "transactions": "العمليات", "analytics": "التحليلات", "settings": "الإعدادات" },
+  "actions": { "addTransaction": "إضافة عملية", "edit": "تعديل", "delete": "حذف", "cancel": "إلغاء", "save": "حفظ العملية", "update": "تحديث العملية", "clear": "مسح المرشحات", "confirm": "تأكيد", "close": "إغلاق", "dismiss": "تجاهل" },
+  "navigation": { "primary": "التنقل الرئيسي" },
+  "header": { "dashboard": "نظرة مالية", "transactions": "سجل العمليات", "analytics": "التحليلات", "settings": "الإعدادات", "privacy": "تبقى بياناتك على هذا الجهاز" },
+  "summary": { "income": "إجمالي الدخل", "expense": "إجمالي المصروفات", "bill": "إجمالي الفواتير", "investment": "الاستثمارات", "balance": "الرصيد الحالي", "balanceHint": "الدخل مطروحًا منه جميع التدفقات الخارجة" },
+  "type": { "income": "دخل", "expense": "مصروف", "bill": "فاتورة", "investment": "استثمار", "all": "جميع الأنواع" },
+  "categories": {
+    "salary": "راتب", "freelance": "عمل حر", "business": "أعمال", "bonus": "مكافأة", "interest": "فوائد", "rental": "إيجار", "other": "أخرى",
+    "food": "طعام", "transportation": "مواصلات", "housing": "سكن", "shopping": "تسوق", "entertainment": "ترفيه", "healthcare": "رعاية صحية", "education": "تعليم", "travel": "سفر",
+    "rent": "إيجار", "electricity": "كهرباء", "water": "مياه", "internet": "إنترنت", "phone": "هاتف", "insurance": "تأمين", "subscriptions": "اشتراكات",
+    "stocks": "أسهم", "etfs": "صناديق متداولة", "crypto": "عملات رقمية", "bonds": "سندات", "realEstate": "عقارات", "savings": "ادخار"
+  },
+  "charts": { "expenseBreakdown": "توزيع المصروفات", "expenseSubtitle": "الإنفاق حسب الفئة", "sixMonthTrend": "اتجاه ستة أشهر", "trendSubtitle": "عرض متحرك للدخل والتدفقات الخارجة", "noExpenseData": "أضف مصروفًا لرؤية توزيعه حسب الفئة.", "noTrendData": "أضف عمليات لإظهار اتجاهك المالي." },
+  "recent": { "title": "النشاط الأخير", "subtitle": "أحدث عملياتك", "viewAll": "عرض الكل", "empty": "لا توجد عمليات بعد", "emptyHint": "أضف أول عملية لبدء التتبع." },
+  "transaction": { "transaction": "العملية", "category": "الفئة", "type": "النوع", "date": "التاريخ", "amount": "المبلغ", "actions": "الإجراءات", "count": "{{count}} عملية", "descriptionFallback": "لا يوجد وصف" },
+  "filters": { "search": "البحث في العمليات", "searchPlaceholder": "ابحث في العنوان أو الوصف…", "type": "النوع", "category": "الفئة", "allCategories": "جميع الفئات", "startDate": "من", "endDate": "إلى", "active": "مرشحات نشطة", "empty": "لا توجد عمليات مطابقة", "emptyHint": "جرّب تعديل المرشحات أو مسحها." },
+  "form": { "addTitle": "إضافة عملية", "editTitle": "تعديل العملية", "subtitle": "سجّل الدخل أو الإنفاق أو الفواتير أو الاستثمارات.", "title": "العنوان", "titlePlaceholder": "مثال: راتب الشهر", "description": "الوصف", "descriptionPlaceholder": "ملاحظة اختيارية", "amount": "المبلغ", "date": "التاريخ", "type": "نوع العملية", "category": "الفئة", "selectCategory": "اختر فئة" },
+  "validation": { "titleRequired": "أدخل عنوانًا.", "titleLong": "يجب ألا يتجاوز العنوان 80 حرفًا.", "amountPositive": "أدخل مبلغًا أكبر من صفر.", "dateRequired": "اختر تاريخًا.", "categoryRequired": "اختر فئة." },
+  "dialogs": { "deleteTitle": "حذف العملية؟", "deleteBody": "سيتم حذف «{{title}}» نهائيًا، ولا يمكن التراجع عن ذلك.", "clearTitle": "مسح جميع البيانات المالية؟", "clearBody": "سيتم حذف جميع العمليات المخزنة في هذا المتصفح نهائيًا.", "resetTitle": "إعادة ضبط البيانات التجريبية؟", "resetBody": "سيتم استبدال العمليات الحالية بمجموعة بيانات FINORA التجريبية الأصلية." },
+  "settings": { "preferences": "التفضيلات", "preferencesHint": "خصّص طريقة عرض FINORA وتنسيق القيم.", "language": "اللغة", "currency": "عملة العرض", "currencyHint": "تفضيل للعرض فقط — لا يتم تحويل القيم.", "data": "البيانات المحلية", "dataHint": "تُحفظ العمليات بخصوصية في هذا المتصفح باستخدام IndexedDB.", "resetDemo": "إعادة ضبط البيانات التجريبية", "resetDemoHint": "استعادة مجموعة البيانات النموذجية الأصلية.", "clearData": "مسح جميع البيانات المالية", "clearDataHint": "حذف كل العمليات نهائيًا من هذا المتصفح." },
+  "toast": { "created": "تمت إضافة العملية", "updated": "تم تحديث العملية", "deleted": "تم حذف العملية", "reset": "تمت استعادة البيانات التجريبية", "cleared": "تم مسح البيانات المالية", "error": "حدث خطأ. حاول مرة أخرى." },
+  "common": { "loading": "جارٍ تحميل بياناتك المالية…", "notAvailable": "غير متاح", "localFirst": "محلي أولًا", "plus": "موجب", "minus": "سالب" }
+}
